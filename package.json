@@ -1,0 +1,22 @@
+{
+  "name": "virtual-pet",
+  "version": "1.0.0",
+  "description": "This is a readme for my Manchester Codes virtual pet project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roldhamk/virtual-pet.git"
+  },
+  "author": "Rachael Oldham-Knott",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roldhamk/virtual-pet/issues"
+  },
+  "homepage": "https://github.com/roldhamk/virtual-pet#readme",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  }
+}
