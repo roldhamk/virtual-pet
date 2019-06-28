@@ -1,6 +1,6 @@
 This is a readme for my Manchester Codes virtual pet project.
 
-I will be creating a pet that will::
+I will be creating a pet that will:
 
 * Have a name<br>
 * Age<br>
