@@ -47,3 +47,18 @@ describe('naming pet', () => {
         expect(pet.fitness).toEqual(4);
     })
   });
+  describe('walking the pet', () => {
+    it('fitness level will increase by 4', () => {
+        pet.fitness = 4;
+        pet.walk();
+        expect(pet.fitness).toEqual(8);
+        pet.fitness = 6;
+        pet.walk();
+        expect(pet.fitness).toEqual(10);
+    })
+    it('increases fitness to a maximum of 10', () =>{
+        pet.fitness = 8;
+        pet.walk();
+        expect(pet.fitness).toEqual(10);
+    } )
+  });
