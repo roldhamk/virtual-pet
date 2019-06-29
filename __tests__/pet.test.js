@@ -62,3 +62,27 @@ describe('naming pet', () => {
         expect(pet.fitness).toEqual(10);
     } )
   });
+  describe('pet check up', () => {
+      it('check if pet needs a walk', () => {
+          pet.fitness = 3;
+          pet.checkUp();
+          expect(pet.checkUp()).toEqual(console.log('I need a walk'))
+      })
+      it('check if pet is hungry', () => {
+        pet.hunger = 5;
+        pet.checkUp();
+        expect(pet.checkUp()).toEqual(console.log('I am hungry'))
+    })
+    it('check if pet need a walk and is hungry', () => {
+        pet.fitness = 3;
+        pet.hunger = 5
+        pet.checkUp();
+        expect(pet.checkUp()).toEqual(console.log('I am hungry AND I need a walk'))
+    })
+    it('checks that the pet does not need feeding or walking', () => {
+        pet.fitness = 4;
+        pet.hunger = 1;
+        pet.checkUp();
+        expect(pet.checkUp()).toEqual(console.log('I feel great!'))
+    })
+  });
