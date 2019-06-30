@@ -8,7 +8,10 @@ function Pet(name) {
     this.fitness = MAX_FITNESS
 };
 
-Pet.prototype = {	
+Pet.prototype = {
+    get isAlive() {
+    return this.age < 30 && this.hunger < 10 && this.fitness > 0;
+    },   	
     growUp: function () {	
         this.age += 1;
         this.hunger += 5,
@@ -38,6 +41,6 @@ Pet.prototype = {
             return console.log('I feel great!')
         }
     }
-};
+}
 
 module.exports = Pet;

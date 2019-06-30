@@ -86,3 +86,12 @@ describe('naming pet', () => {
         expect(pet.checkUp()).toEqual(console.log('I feel great!'))
     })
   });
+  describe('pet death', () => {
+      it('returns true if pet is alive', () => {
+          expect(pet.isAlive).toBe(true)
+      })
+      it('returns false if pet is dead', () => {
+          pet.fitness = 0;
+          expect(pet.isAlive).toBe(false)
+      })
+  });
