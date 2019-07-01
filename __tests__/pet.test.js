@@ -129,7 +129,9 @@ describe("pet death", () => {
     expect(pet.isAlive).toBe(false);
   });
 });
-//the testz below pass, but I'm unsure if I've written the have a baby test and function correct, as it is the same as adopting.
+
+//the tests below pass, but I'm unsure if I've written the have a baby test and function correct, as it is the same as adopting.
+
 describe("parenting a child", () => {
     it('allows parent to adopt', () => {
         const parent = new Pet('wanda');
