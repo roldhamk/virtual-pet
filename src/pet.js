@@ -3,12 +3,14 @@ const MAX_FITNESS = 10;
 const MIN_HUNGER = 0;
 
 function Pet(name) {
-  (this.name = name),
-    (this.age = 0),
-    (this.hunger = 0),
-    (this.fitness = MAX_FITNESS);
-}
+  this.name = name,
+  this.age = 0,
+  this.hunger = 0,
+  this.fitness = MAX_FITNESS,
+  this.children = []
 
+  
+}
 Pet.prototype = {
   get isAlive() {
     return this.age < 30 && this.hunger < 10 && this.fitness > 0;
@@ -51,6 +53,12 @@ Pet.prototype = {
     } else {
         return console.log("I feel great!");
     }
+  },
+  adoptChild: function(child) {
+      this.children.push(child);
+  },
+  haveBaby: function(name) {
+      this.children.push(name)
   }
 };
 
